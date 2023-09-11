@@ -64,7 +64,7 @@ The following modules/packages need to be installed for use in our CSE251 class:
 ## <a name="install-git"></a> **Install Git**
 Git comes preinstalled with your VS Code. You only need to clone our class repo. If you are reading this page in a browser, then you are inside of the the class repo. To clone it, go to the top most directory of the repo. The name of the repo changes each semester, but follows the pattern of "https://github.com/brandonfoushee/cse251\<semesterYY\>" where semester is 's', 'f', 'w' (for spring, fall, winter) and YY is the last two digits of the year.
 
-So if this semester was Winter 2023, then the repo name would be https://github.com/brandonfoushee/cse251s23. You can always see the directory structure using the breadcrumb at the top in GitHub:
+So if this semester was Fall 2023, then the repo name would be https://github.com/brandonfoushee/cse251f23. You can always see the directory structure using the breadcrumb at the top in GitHub:
 
 ![](breadcrumb.PNG)
 
