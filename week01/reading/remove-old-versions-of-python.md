@@ -1,4 +1,4 @@
-![](../banner.png)
+![](../../banner.png)
 
 # Make your life easier by removing old versions of Python
 
