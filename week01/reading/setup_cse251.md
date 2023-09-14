@@ -21,7 +21,7 @@ Within VS Code, click on Extensions:
 Then search for Python and install the Microsoft one (it will have millions of downloads). This is not the same Python that you will use to run your code. This extension will enable the VS Code IDE to offer feedback as you type your code. One of the benefits of typing your code in an IDE is that it can help you with code completion, show errors before you run your code, documentation, and code navigation. 
 
 ## <a name="install-python"></a>**Install Python**
-We will be using Python throughout the course. Please ensure that you have version 3.11 or higher.  Python can be [downloaded here](python.org/downloads). This semester we will be using [python-version](python-version.md).
+We will be using Python throughout the course. Please ensure that you have version 3.11 or higher.  Python can be [downloaded here](https://python.org/downloads). This semester we will be using [python-version](python-version.md).
 
 Python needs to be installed on your computer (separate from installing Python in VS Code). After you install Python on your computer, open a terminal (command prompt) 
 and type either `py --version` or `python3 --version` (this should show you the version that you installed). 
@@ -64,7 +64,7 @@ The following modules/packages need to be installed for use in our CSE251 class:
 ## <a name="install-git"></a> **Install Git**
 Git comes preinstalled with your VS Code. You only need to clone our class repo. If you are reading this page in a browser, then you are inside of the the class repo. To clone it, go to the top most directory of the repo. The name of the repo changes each semester, but follows the pattern of "https://github.com/brandonfoushee/cse251\<semesterYY\>" where semester is 's', 'f', 'w' (for spring, fall, winter) and YY is the last two digits of the year.
 
-So if this semester was Winter 2023, then the repo name would be https://github.com/brandonfoushee/cse251s23. You can always see the directory structure using the breadcrumb at the top in GitHub:
+So if this semester was Fall 2023, then the repo name would be https://github.com/brandonfoushee/cse251f23. You can always see the directory structure using the breadcrumb at the top in GitHub:
 
 ![](breadcrumb.PNG)
 
