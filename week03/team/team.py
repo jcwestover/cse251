@@ -26,12 +26,12 @@ class Request_thread(threading.Thread):
         self.response = {}
 
     def run(self):
-        response = requests.get(self.url)
+        http_response = requests.get(self.url)
         # Check the status code to see if the request succeeded.
-        if response.status_code == 200:
-            self.response = response.json()
+        if http_response.status_code == 200:
+            self.response = http_response.json()
         else:
-            print('RESPONSE = ', response.status_code)
+            print('RESPONSE = ', http_response.status_code)
 
 class Deck:
 
@@ -66,7 +66,7 @@ if __name__ == '__main__':
     #        team_get_deck_id.py program once. You can have
     #        multiple decks if you need them
 
-    deck_id = 'ENTER ID HERE'
+    deck_id = 'gw0cv964a7g9'
 
     # Test Code >>>>>
     deck = Deck(deck_id)

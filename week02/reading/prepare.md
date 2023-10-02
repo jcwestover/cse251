@@ -213,7 +213,7 @@ Note: the function `dir()` can display the current builtin functions in your pro
 
 ## Differences between threads and processes
 
-### Python Global Interpreter (GIL)
+### Python Global Interpreter Lock (GIL)
 
 Before we can talk about threads and processes, we need to understand the Python Global Interpreter Lock or GIL. It is a mutex (or a lock) that allows only one thread to hold the control of the Python interpreter.
 

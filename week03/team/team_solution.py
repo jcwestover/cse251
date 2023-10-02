@@ -53,9 +53,6 @@ class Deck:
         else:
             return ''
 
-    def cards_remaining(self):
-        return self.remaining
-
 
     def draw_endless(self):
         if self.remaining <= 0:
@@ -70,7 +67,7 @@ if __name__ == '__main__':
     #        team_get_deck_id.py program once. You can have
     #        multiple decks if you need them
 
-    deck_id = 'c682cxag7acg'
+    deck_id = 'n7v48r4rniei'
 
     deck = Deck(deck_id)
 
