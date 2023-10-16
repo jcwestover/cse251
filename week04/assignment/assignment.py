@@ -6,7 +6,7 @@ Requirements
 3. Using a new thread each time, obtain a list of the characters, planets, 
    starships, vehicles, and species of the sixth Star Wars movie.
 3. Use the provided print_film_details function to print out the data 
-   (should look exactly like the "sample_output.txt file).
+   (you can modify it if you need).
    
 Questions:
 1. Is this assignment an IO Bound or CPU Bound problem (see https://stackoverflow.com/questions/868568/what-do-the-terms-cpu-bound-and-i-o-bound-mean)?
