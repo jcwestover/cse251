@@ -7,9 +7,7 @@ Requirements
    that you should not do something like this: 
         if q.size() < 10:
    Use the blocking semaphore function 'acquire'.
-4. Produce a Plot of car count vs queue size (okay to use q.size since this is not a
-   condition statement).
-5. The number of cars produced by the manufacturer must equal the number of cars bought by the 
+4. The number of cars produced by the manufacturer must equal the number of cars bought by the 
    dealership. Use necessary data objects (e.g., lists) to prove this. There is an assert in 
    main that must be used.
    
