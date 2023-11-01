@@ -24,11 +24,11 @@ The following graph outlines the processes and data structures that you will nee
 
 **Main** This is the main code that will create the thread, processes, queue, semaphore(s), and list.  It will assert the amount of prime numbers after the `prime process`'s are finished.
 
->You might want to review 'Opening A File' in [prepare00](../../week00/prepare00.md)
+>You might want to review 'Opening A File' in [prepare00](../../week01/reading/prepare.md)
 
 ### Requirements
 
-1. Download the file `team07.py` from GitHub [File Link](team07.py)
+1. Download the file `team.py` from GitHub [File Link](team.py)
 2. Read the numbers from the data file into a queue.
 3. Create `prime processes`'s based on the number of cpus on your computer.
 4. Do not hard code the number of values that the program will process. Your program needs to handle any number of values in a data file.
