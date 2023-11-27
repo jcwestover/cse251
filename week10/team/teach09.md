@@ -8,7 +8,7 @@ We will be learning about using the pool function apply_async().
 
 ## Assignment
 
-You will be using the process pool apply_async() function to change your assignment 3 program (the Star Wars one).
+You will be using the process pool apply_async() function to change your assignment 4 program (the Star Wars one).
 
 ### Requirements
 
