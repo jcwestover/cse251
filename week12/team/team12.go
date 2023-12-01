@@ -1,4 +1,6 @@
-/* ---------------------------------------
+/*
+	---------------------------------------
+
 Course: CSE 251
 Lesson Week: 12
 File: team.go
@@ -20,14 +22,17 @@ readValue()
 This goroutine will display the contents of the channel containing
 the prime numbers
 
---------------------------------------- */
+---------------------------------------
+*/
 package main
 
 import (
 	"fmt"
-	"math/rand"
+	"sync"
 	"time"
 )
+
+var globalNumberOfPrimes = 0
 
 func isPrime(n int) bool {
 	// Primality test using 6k+-1 optimization.
@@ -51,33 +56,56 @@ func isPrime(n int) bool {
 	return true
 }
 
-func worker() {
-	// TODO - process numbers on one channel and place prime number on another
+func worker(id int, numbers chan int, primes chan int, wg *sync.WaitGroup) {
+	for num := range numbers {
+		if isPrime(num) {
+			primes <- num
+		}
+
+		wg.Done()
+	}
 }
 
-func readValues() {
-	// TODO -Display prime numbers from a channel
+func readValues(primes chan int) int {
+	total := 0
+	for range primes {
+		total += 1
+	}
+	return total
 }
 
 func main() {
+	startTime := time.Now()
 
 	workers := 10
-	numberValues := 100
+	numberValues := 110_003
+	start := 10_000_000_000
 
 	// Create any channels that you need
+	numbers := make(chan int, numberValues)
+	primes := make(chan int, numberValues)
+
 	// Create any other "things" that you need to get the workers to finish(join)
+	wg := new(sync.WaitGroup)
 
 	// create workers
 	for w := 1; w <= workers; w++ {
-		go worker() // Add any arguments
+		go worker(w, numbers, primes, wg) // Add any arguments
 	}
 
-	rand.Seed(time.Now().UnixNano())
-	for i := 0; i < numberValues; i++ {
-		// ch <- rand.Int()
+	for i := start; i < start+numberValues; i++ {
+		wg.Add(1)
+		numbers <- i
 	}
 
-	go readValues() // Add any arguments
+	wg.Wait()
 
-	fmt.Println("All Done!")
+	close(numbers)
+	close(primes)
+
+	total := readValues(primes)
+
+	elapsed := time.Since(startTime)
+	fmt.Printf("Found %v primes in %v", total, elapsed)
+
 }

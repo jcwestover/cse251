@@ -8,7 +8,7 @@ In this team activity, you will be finding primes from an array of numbers using
 
 ## Assignment
 
-Download the file [`team12.go`](teach12.go) .
+Download the file [`team12.go`](team12.go) .
 
 ### Sample Output of the program
 

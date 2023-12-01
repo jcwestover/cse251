@@ -235,11 +235,11 @@ class Pandemic:
 
                 fam = self.families[id]
 
-                virus1 = self.get_virus(fam.husband)
+                virus1 = self.get_virus(fam.virus1)
                 if virus1 != None:
                     _recurive_gen(virus1.parents, gen + 1)
 
-                virus2 = self.get_virus(fam.wife)
+                virus2 = self.get_virus(fam.virus2)
                 if virus2 != None:
                     _recurive_gen(virus2.parents, gen + 1)
 
