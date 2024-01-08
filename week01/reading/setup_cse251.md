@@ -21,7 +21,7 @@ Within VS Code, click on Extensions:
 Then search for Python and install the Microsoft one (it will have millions of downloads). This is not the same Python that you will use to run your code. This extension will enable the VS Code IDE to offer feedback as you type your code. One of the benefits of typing your code in an IDE is that it can help you with code completion, show errors before you run your code, documentation, and code navigation. 
 
 ## <a name="install-python"></a>**Install Python**
-We will be using Python throughout the course. Please ensure that you have version 3.11 or higher.  Python can be [downloaded here](https://python.org/downloads). This semester we will be using [python-version](python-version.md).
+We will be using Python throughout the course. Python can be [downloaded here](https://python.org/downloads). This semester we will be using [python-version](python-version.md).
 
 Python needs to be installed on your computer (separate from installing Python in VS Code). After you install Python on your computer, open a terminal (command prompt) 
 and type either `py --version` or `python3 --version` (this should show you the version that you installed). 
