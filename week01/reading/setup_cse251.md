@@ -62,17 +62,11 @@ The following modules/packages need to be installed for use in our CSE251 class:
 5. opencv-python
 
 ## <a name="install-git"></a> **Install Git**
-Git comes preinstalled with your VS Code. You only need to clone our class repo. If you are reading this page in a browser, then you are inside of the the class repo. To clone it, go to the top most directory of the repo. The name of the repo changes each semester, but follows the pattern of "https://github.com/brandonfoushee/cse251\<semesterYY\>" where semester is 's', 'f', 'w' (for spring, fall, winter) and YY is the last two digits of the year.
-
-So if this semester was Fall 2023, then the repo name would be https://github.com/brandonfoushee/cse251f23. You can always see the directory structure using the breadcrumb at the top in GitHub:
-
-![](breadcrumb.PNG)
-
-Click on the repo name in the breadcrumb and then click the "Code" button to get a copy of the repo path, use the HTTPS link.
+Git comes preinstalled with your VS Code. You need to clone our class repo. If you are reading this page in a browser, then you are inside of the the class repo. To clone it, go to the top most directory of the repo and click on the repo name in the breadcrumb and then click the "Code" button to get a copy of the repo path, use the HTTPS link.
 
 You would then open a terminal in VS Code (using cd, navigate to where you want to clone the repo) and type:
-git clone https://github.com/brandonfoushee/cse251f23.git  (or paste in the link that you copied)
+git clone https://github.com/brandonfoushee/cse251.git  (or paste in the link that you copied)
 
-This will create a cse251f23 directory in the directory in which you are in. 
+This will create a cse251 directory in the directory in which you are in. 
 
 Now you have all the files for the class.
