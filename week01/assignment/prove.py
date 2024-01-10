@@ -95,7 +95,7 @@ from unittest import TestCase
 #      10) TODO: Provide a quick explanation of what pass-by-reference means. Also, what does mutable mean?
 
 # 11) TODO write a function called 'pass_by_reference_immutable_example' that takes two parameters:
-#      - strings_are_pass_by_reference_and_immutable: list
+#      - strings_are_pass_by_reference_and_immutable: string
 #      - str_to_add: str
 #      - return value: str
 #      The function should append the str_to_add to the strings_are_pass_by_reference_and_immutable string.
