@@ -141,7 +141,7 @@ def thread_function(name, sleep_time):
 if __name__ == '__main__':
     print('Main    : before creating thread')
 
-    # Create a thread.  This doesn't start it, just it's creation
+    # Create a thread.  This doesn't start it, just its creation
     # The args argument allow the main code to pass arguments to the
     # thread.
     # we DON'T want any global variables in this case.
