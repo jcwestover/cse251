@@ -172,7 +172,7 @@ def main():
         - Know to obtain a value at a specific index in a list
         - Know how to extend a class
         - Understand that an extended/child class inherits everything from parent class
-        - Readings: https://www.geeksforgeeks.org/python-classes-and-objects/, https://www.geeksforgeeks.org/extend-class-method-in-python/
+        - Readings: https://www.geeksforgeeks.org/python-classes-and-objects/, https://www.geeksforgeeks.org/extend-class-method-in-python/, https://realpython.com/python-super/
     '''
     # 13) TODO instantiate an object using MyParentClass with the following three parameters: (1, [5, 6, 7], "3")
     obj = ...
