@@ -11,7 +11,7 @@ The python server in this assignment contains details of all of the Star Wars fi
 1. If you have cloned the class repo, then open the [assignment.py](assignment.py) file.
 2. Your goal is to retrieve the information from the website as fast as you can.
 
-**Coding Instructions**
+**Coding Instructions**\n', end="")
 
 - Each API call must only retrieve one piece of information
 - Run the server.py program from a terminal/console program.  Simply type `python server.py`.  Note that you need the `data.txt` in the same folder as `server.py` in order for the server to work. 
