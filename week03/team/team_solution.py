@@ -38,7 +38,7 @@ class Deck:
 
 
     def reshuffle(self):
-        req = Request_thread(rf'https://deckofcardsapi.com/api/deck/{self.id}/shuffle/')
+        req = Request_thread(f'https://deckofcardsapi.com/api/deck/{self.id}/shuffle/')
         req.start()
         req.join()
 

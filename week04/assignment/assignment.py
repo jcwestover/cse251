@@ -77,6 +77,8 @@ def main():
     # for each of the categories (might want to create function to do this)
 
     # TODO Call the display function
+    
+    vehicle_urls = films["vehicles"]
 
     print(f'There were {call_count} calls to the server')
     total_time = time.perf_counter() - begin_time
