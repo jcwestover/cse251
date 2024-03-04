@@ -1,6 +1,6 @@
 ![](../../banner.png)
 
-# 08 Team: Using Multiprocessing Semaphores, Queue, and List
+# 08 Team: Using Multiprocessing Queue and List
 
 ## Overview
 
@@ -10,7 +10,7 @@ You will be creating a thread and many processes to check a list of prime number
 
 The following graph outlines the processes and data structures that you will need to solve this program.
 
-![](team07_sequence.png)
+![](team_sequence.png)
 
 **data.txt** This is the file that contains a list of numbers to test if they are prime.
 
