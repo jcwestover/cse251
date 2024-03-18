@@ -61,7 +61,7 @@ class Maze():
         for row in range(self.height):
             for col in range(self.width):
                 if self.pixels[row, col] == 255:
-                    self.colors[row][col] = COLOR_WHITE
+                    self.colors[row][col] = COLOR_WHITE # type: ignore
 
         self._draw()
 
