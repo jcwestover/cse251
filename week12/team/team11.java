@@ -26,10 +26,11 @@ Part 3:
   of threads.
 
 ************************************/
+import java.util.ArrayList;
 import java.util.Random; 
 import java.lang.Math; 
 
-public class team10 {
+public class team11 {
 
   static boolean isPrime(int n) 
   { 
@@ -48,8 +49,9 @@ public class team10 {
       return true; 
   }
 
+
+
   public static void main(String[] args) {
-    System.out.println("Hello world!");
 
     // create instance of Random class 
     Random rand = new Random(); 
@@ -61,13 +63,20 @@ public class team10 {
       array[i] = Math.abs(rand.nextInt());
     }
 
-  // TODO - this is just sample code. you can remove it.
-    for (int i = 0; i < count; i++) 
-    {
-      if (isPrime(array[i]))
-      {
-        System.out.println(array[i]);
-      }
-    }
+    team11 me = new team11();
+
+    //PrimeThread t = new PrimeThread(0, count, array);
+    PrimeInterface primeInterface = new PrimeInterface(0, count, array);
+
+    Thread t = new Thread(primeInterface);
+    t.start();
+
+    /* t.start();
+    try {
+        t.join();
+    } catch (InterruptedException e) {
+        e.printStackTrace();
+    } */
+
   }
 }
