@@ -4,7 +4,7 @@
 
 **Things you should know or know how to do that you learned from last week**
 (if not, then please ask---see [Matthew 7:7-8](https://www.churchofjesuschrist.org/study/scriptures/nt/matt/7?lang=eng))
-1. Familiarity with creating threads in Go.
+1. Familiarity with creating threads in Java.
 
 <ins>Key Concepts in this week's reading:</ins>
 1. There are three readings. The first presents a high-level overview of parts of an operating system.
@@ -13,7 +13,7 @@
 
 ## processes
 
-A process be definition is a program that is loaded into memory and is running.  
+A process is a program that is loaded into memory and is running.  
 
 ## process states
 
