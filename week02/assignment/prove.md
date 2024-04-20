@@ -4,7 +4,7 @@
 
 ## Overview
 
-Your first assignment is to create two programs that will compute the sum of numbers from 1 to a given number (not counting the number). The first program will need to perform this function using the threading module and either a global variable or a list object that gets passed in. The second program will perform this function by extending the Thread class and creating an object using this thread class.
+Your task is to create two programs that will compute the product of numbers from 1 to a given number (not counting the final number). The first program will need to perform this function using the threading module and global variable. The second program will perform this function by extending the Thread class and creating an object using this thread class.
 
 ## Instructions
 
@@ -13,30 +13,25 @@ Read the `assignment_a.py` and `assignment_b.py` from the `week02/assignment` fo
 
 ## Rubric
 
-**Rubric for Assignment01-a.py**
-Item | Proficient | Emerging | Beginning | Missing
---- | --- | --- | --- | ---
-Runs without errors | 10 | 0 | 0 | 0
-[Style](../../style.md)* | 10 | 7 | 3 | 0
-Creates a new thread | 5 | 0 | 0 | 0
-Starts thread (does not call run) | 5 | 0 | 0 | 0
-Joins threads | 5 | 0 | 0 | 0
-Sets global SUM in sum function | 5 | 0 | 0 | 0
-Asserts pass | 10 | 7 | 3 | 0
+**Rubric for assignment_a.py**
+Item | Point Value
+--- | ---
+Runs without errors | 10
+Creates a new thread | 10
+Starts thread (does not call run) | 5
+Joins threads | 5
+Sets global SUM in sum function | 5
+Asserts pass | 15
 
-
-**Rubric for Assignment01-b.py**
-Item | Proficient | Emerging | Beginning | Missing
---- | --- | --- | --- | ---
-Runs without errors | 10 | 0 | 0 | 0
-[Style](../../style.md)* | 10 | 7 | 3 | 0
-Class extends threading.Thread | 5 | 0 | 0 | 0
-Calls super constructor | 5 | 0 | 0 | 0
-Constructor takes the number to sum | 5 | 0 | 0 | 0
-Constructor creates class sum variable | 5 | 0 | 0 | 0
-Asserts pass | 10 | 7 | 3 | 0
-
-*For the first few assignments, more feedback will be given on style issues, rather than point deductions, to help you figure out the expectations.
+**Rubric for assignment_b.py**
+Item | Point Value
+--- | ---
+Runs without errors | 10
+Class extends threading.Thread | 10
+Calls super constructor | 5
+Constructor takes the number to sum | 5
+Constructor creates class sum variable | 5
+Asserts pass | 15
 
 Assignments are not accepted late. Instead, you should submit what you have completed by the due date for partial credit.
 
@@ -44,4 +39,7 @@ Assignments are individual and not team based.  Any assignments found to be plag
 
 ## Submission
 
-When finished, upload your Python file to Canvas (please no ZIP files).
+When finished
+
+- upload your assignment_a.py and signature files to Canvas.
+- upload your assignment_b.py and signature files to Canvas.

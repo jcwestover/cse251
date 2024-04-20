@@ -1,6 +1,7 @@
 '''
 Requirements
 1. Create a recursive, multithreaded program that finds the exit of each maze.
+2. COMMENT every line that you write yourself.
    
 Questions:
 1. It is not required to save the solution path of each maze, but what would

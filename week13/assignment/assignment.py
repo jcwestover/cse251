@@ -5,6 +5,9 @@ File: assignment.py
 Author: <your name>
 Purpose: Assignment 12 - Family Search
 """
+
+#COMMENT every line that you write yourself.
+
 import time
 import threading
 import json

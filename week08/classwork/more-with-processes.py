@@ -8,7 +8,7 @@ Requirements
    prime increment a "counter" (use an appropriate multiprocessing data structure).
 5. Assert that the number of prime numbers found is correct.
 
-Questions to consider with your Team:
+Questions:
 1. Does increasing the number of processes beyond your cpu count decrease the time it takes
    to find the prime numbers? Why or why not?
 2. What are some of the advantages and disadvantages of using processes over threads?

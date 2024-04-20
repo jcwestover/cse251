@@ -5,6 +5,7 @@
 - [ ] [Install Python](#install-python)
 - [ ] [Install Python Modules](#install-modules)
 - [ ] [Install Git](#install-git)
+- [ ] [Configure Environment](#configure-env)
 
 ## <a name="install-vscode">Install Visual Studio Code IDE
 There are a number of IDEs [Integrated Development Environments](https://en.wikipedia.org/wiki/Integrated_development_environment) available to programmers. You are free to use any editor that you want.  However, the course will use Visual Studio Code as the editor in video examples and during class time.  VSCode can be downloaded at [VSCode](https://code.visualstudio.com).
@@ -70,3 +71,55 @@ git clone https://github.com/brandonfoushee/cse251.git  (or paste in the link th
 This will create a cse251 directory in the directory in which you are in. 
 
 Now you have all the files for the class.
+
+## <a name="configure-env"></a> **Configure Environment**
+
+Configure your Python environment in VS Code to:
+1. Find the [cse251function.py](../../resources/cse251functions.py) file. This file is located in the resources directory.
+2. Use the active directory as your Current Working Directory (cwd).
+
+### cse251function.py file ###
+The Python Interpretor uses a property called `PYTHONPATH`. This property defines a list of directories to search through to resolve imports. You will add the absolute path to your resource/cse251function.py file. To do this:
+1. Right click on the resource/cse251function.py file in VS Code. 
+2. Select `Copy Path`.
+3. Open the `.env` file (in your workspace root directory---scroll to the bottom after week13 in VS Code).
+4. Paste the path after PYTHONPATH=, removing the text in-between <>, including the <> symbols.
+5. Remove the 'cse251function.py' at the end.
+6. Save
+
+Example: `PYTHONPATH=c:/Users/bfous/Documents/workspace/cse251/resources`
+
+### Set Current Working Directory (cwd) ###
+When you run a Python file in VS Code, it will resolve paths to directory or files looking in your Current Working Directory (cwd). By default, the cwd is your workspace. Your workspace is the Git repo that you cloned. So, if you look in the Explorer and scroll up (above week01, resources, and .vscode) you will see the workspace is called 'CSE251'. 
+
+If code tries to open a file, like this:
+```
+with open("data.txt", "r") as f:
+```
+Python will look in your CSE251 directory. If the file is in the same directory as the file containing the above code (the file you ran to execute that code), then you will get a File Not Found error. 
+
+For this class, we want Python to look in the same directory as your assignment files. To do this we want to change the cwd to be the same directory as the file you are executing/running.
+
+To set your cwd to be the same directory as the executing/running file:
+1. Open [.vscode/launch.json](../../.vscode/launch.json).
+2. Verify that the following text is in the launch.json file:
+```
+{
+    "configurations": [
+        {
+            "name": "Python",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "cwd": "${fileDirname}"
+        }
+    ],
+}
+```
+**Note:** 
+The "Run" button (in the top right corner of VS Code) is an extension and not part of VS Code. It will not run your Python code using the launch.json file. Thus, if you use the button, it will NOT change your cwd and files will not be found. 
+
+**<span style="color:red;font-size:25px">Don't use the Run button.</span>** 
+
+Instead, use the built-in VS Code Run->Run Without Debugging option. The shortcut on Windows is Ctrl-F11.

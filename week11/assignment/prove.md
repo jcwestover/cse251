@@ -1,6 +1,6 @@
 ![](../../banner.png)
 
-# 10 Prove: Dining philosophers
+# 11 Prove: Dining philosophers
 
 ## Overview
 
@@ -22,23 +22,22 @@ The problem is how to design a discipline of behavior (a concurrent algorithm) s
 
 You will be implementing this above problem statement.  Refer to the header of the Python file for requirements for this assignment.
 
-The file used for this assignment is [assignment10.py](assignment10.py)
+The file used for this assignment is [assignment.py](assignment.py)
 
 ## Rubric
 
-Item | Proficient | Emerging | Beginning | Missing
---- | --- | --- | --- | ---
-Runs without errors | 20 | 0 | 0 | 0
-[Style](../../style.md) | 15 | 10 | 5 | 0
-Program not hard coded to 5 philosophers | 10 | 0 | 0 | 0
-Waiter class used to control forks | 15 | 0 | 0 | 0
-Program is concurrent (philosophers take turns) | 30 | 20 | 10 | 0
-Program provides evidence that philosophers eat and think approx. same number of times | 10 | 7 | 3 | 0
+Item | Point Value
+--- | ---
+Runs without errors | 30
+Program not hard coded to 5 philosophers | 10
+Waiter class used to control forks | 20
+Program is concurrent (philosophers take turns) | 30
+Program provides evidence that philosophers eat and think approx. same number of times | 10
 
-Assignments are not accepted late. Instead, you should submit what you have completed by the due date for partial credit. 
+Assignments are not accepted late. Instead, you should submit what you have completed by the due date for partial credit.
 
-Assignments are individual and not team based.  Any assignments found to be  plagiarized will be graded according to the `ACADEMIC HONESTY` section in the syllabus. The Assignment will be graded in broad categories as outlined in the syllabus.
+Assignments are individual and not team based.  Any assignments found to be plagiarized will be graded according to the `ACADEMIC HONESTY` section in the syllabus. Personalize your code by adding comments explaining how your code works. This provides evidence that you wrote it yourself. You are allowed to work with other students, but your comments need to be in your own words.
 
 ## Submission
 
-Submit your assignment Python file in Canvas.
+When finished, upload your assignment.py and signature files to Canvas (no zip files).

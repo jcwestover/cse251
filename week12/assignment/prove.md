@@ -68,28 +68,27 @@ Performance: 11.44 viruses/sec
 ## Rubric
 
 **bfs.py**
-Item | Proficient | Emerging | Beginning | Missing
---- | --- | --- | --- | ---
-Runs without errors (including deadlocks) | 10 | 0 | 0 | 0
-[Style](../../style.md) | 10 | 5 | 0 | 0
-All calls to server are in a new thread | 20 | 0 | 0 | 0
-Correct number of viruses and families found for 6 generations | 10 | 5 | 0 | 0
+Item | Point Value
+--- | ---
+Runs without errors (including deadlocks) | 20
+All calls to server are in a new thread | 20
+Correct number of viruses and families found for 6 generations | 10
 
 **dfs.py**
-Item | Proficient | Emerging | Beginning | Missing
---- | --- | --- | --- | ---
-Runs without errors (including deadlocks) | 10 | 0 | 0 | 0
-[Style](../../style.md) | 10 | 5 | 0 | 0
-All calls to server are in a new thread | 20 | 0 | 0 | 0
-Correct number of viruses and families found for 6 generations | 10 | 5 | 0 | 0
+Item | Point Value
+--- | ---
+Runs without errors (including deadlocks) | 20
+All calls to server are in a new thread | 20
+Correct number of viruses and families found for 6 generations | 10
 
-Assignments are not accepted late. Instead, you should submit what you have completed by the due date for partial credit.  Assignments are individual and not to be worked on with others.
+Assignments are not accepted late. Instead, you should submit what you have completed by the due date for partial credit.
 
-Assignments are individual and not team based.  Any assignments found to be  plagiarized will be graded according to the `ACADEMIC HONESTY` section in the syllabus. The Assignment will be graded in broad categories as outlined in the syllabus:
+Assignments are individual and not team based.  Any assignments found to be plagiarized will be graded according to the `ACADEMIC HONESTY` section in the syllabus. Personalize your code by adding comments explaining how your code works. This provides evidence that you wrote it yourself. You are allowed to work with other students, but your comments need to be in your own words.
 
 ## Submission
 
 When finished
 
-- upload your two Python files to Canvas.
+- Upload your bfs.py and signature files to Canvas (no zip files)
+- Upload your dfs.py and signature files to Canvas (no zip files)
 

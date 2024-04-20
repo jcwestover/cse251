@@ -5,6 +5,7 @@ Requirements
    number of CPUs on your computer plus 4.
 3. Keep track of the time it takes to process all 300 images per CPU.
 4. Plot the time to process vs the number of CPUs.
+5. COMMENT every line that you write yourself.
    
 Questions:
 1. What is the relationship between the time to process versus the number of CPUs?

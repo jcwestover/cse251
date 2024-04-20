@@ -11,7 +11,7 @@ The python server in this assignment contains details of all of the Star Wars fi
 1. If you have cloned the class repo, then open the [assignment.py](assignment.py) file.
 2. Your goal is to retrieve the information from the website as fast as you can.
 
-**Coding Instructions**\n', end="")
+**Coding Instructions**
 
 - Each API call must only retrieve one piece of information
 - Run the server.py program from a terminal/console program.  Simply type `python server.py`.  Note that you need the `data.txt` in the same folder as `server.py` in order for the server to work. 
@@ -104,19 +104,18 @@ Here is the URL for person id = 1: http://127.0.0.1:8790/people/1
 
 ## Rubric
 
-Item | Proficient | Emerging | Beginning | Missing
---- | --- | --- | --- | ---
-Runs without errors | 20 | 0 | 0 | 0
-[Style](../../style.md)* | 15 | 10 | 5 | 0https://discord.gg/P5M2WqFB
-Loops over returned URLs returned to make new threads/calls | 20 | 15 | 10 | 0
-Makes correct number of calls to server (passes Assert) | 20 | 0 | 0 | 0
-Finishes under required time limit (or justification provided) | 15 | 0 | 0 | 0
-Questions answered | 10 | 0 | 0 | 0
+Item | Point Value
+--- | ---
+Runs without errors | 30
+Loops over returned URLs returned to make new threads/calls | 20
+Makes correct number of calls to server (passes Assert) | 20
+Finishes under required time limit (or justification provided) | 20
+Questions answered | 10
 
 Assignments are not accepted late. Instead, you should submit what you have completed by the due date for partial credit.
 
-Assignments are individual and not team based.  Any assignments found to be  plagiarised will be graded according to the `ACADEMIC HONESTY` section in the syllabus. The Assignment will be graded in broad categories as outlined in the syllabus:
+Assignments are individual and not team based.  Any assignments found to be plagiarized will be graded according to the `ACADEMIC HONESTY` section in the syllabus. Personalize your code by adding comments explaining how your code works. This provides evidence that you wrote it yourself. You are allowed to work with other students, but your comments need to be in your own words.
 
 ## Submission
 
-When finished, upload your Python file to Canvas.
+When finished, upload your assignment.py and signature files to Canvas (no zip files).

@@ -70,36 +70,29 @@ While running, the server will display requests and replies from your assignment
 - Needs to run faster than if you only used one thread.
 
 
-### Misc
-
-- The server will create a log file called `server.log`
-- You assignment program will create a log file named `assignment.log`
-
 ## Rubric
 
 **breadth-first search**
-Item | Proficient | Emerging | Beginning | Missing
---- | --- | --- | --- | ---
-Runs without errors (including deadlocks) | 10 | 0 | 0 | 0
-[Style](../../style.md) | 10 | 0 | 0 | 0
-All calls to server are in a new thread | 10 | 0 | 0 | 0
-Number of people and families matches the server | 10 | 0 | 0 | 0
-Runs in under 10 seconds | 10 | 0 | 0 | 0
+Item | Point Value
+--- | ---
+Runs without errors (including deadlocks) | 20
+All calls to server are in a new thread | 10
+Number of people and families matches the server | 10
+Runs in under 10 seconds | 10
 
 **depth-first search**
-Item | Proficient | Emerging | Beginning | Missing
---- | --- | --- | --- | ---
-Runs without errors (including deadlocks) | 10 | 0 | 0 | 0
-[Style](../../style.md) | 10 | 0 | 0 | 0
-All calls to server are in a new thread | 10 | 0 | 0 | 0
-Number of people and families matches the server | 10 | 0 | 0 | 0
-Runs in under 10 seconds | 10 | 0 | 0 | 0
+Item | Point Value
+--- | ---
+Runs without errors (including deadlocks) | 20
+All calls to server are in a new thread | 10
+Number of people and families matches the server | 10
+Runs in under 10 seconds | 10
 
 Assignments are not accepted late. Instead, you should submit what you have completed by the due date for partial credit.
 
-Assignments are individual and not team based.  Any assignments found to be  plagiarized will be graded according to the `ACADEMIC HONESTY` section in the syllabus. The Assignment will be graded in broad categories as outlined in the syllabus:
+Assignments are individual and not team based.  Any assignments found to be plagiarized will be graded according to the `ACADEMIC HONESTY` section in the syllabus. Personalize your code by adding comments explaining how your code works. This provides evidence that you wrote it yourself. You are allowed to work with other students, but your comments need to be in your own words.
 
 ## Submission
 
-- Upload your modified `functions.py` file as well as the two log files (`assignment.log` and `server.log`). No zip files please.
+When finished, upload your assignment.py Python and signature files to Canvas (no zip files).
 

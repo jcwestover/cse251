@@ -4,9 +4,9 @@
 
 ## Overview
 
-You will be finishing [Team06](../team/team.md), if your team did not finish it. Then you will be modifying it to run using a range of processes and plotting the results.
+You will be finishing the coding of the video we did in class on Monday. If you missed class, you will need to watch the recording to obtain the code. Then you will be modifying it to run using a range of processes and plotting the results.
 
-Download the [assignment06.py](assignment.py) file and read the requirements.
+Download the [assignment.py](assignment.py) file and read the requirements.
 
 ## Project Description
 
@@ -25,17 +25,16 @@ On my computer, I have 8 CPU cores.  The const variable `CPU_COUNT` is set to 4 
 
 ## Rubric
 
-Item | Proficient | Emerging | Beginning | Missing
---- | --- | --- | --- | ---
-Runs without errors | 35 | 0 | 0 | 0
-[Style](../../style.md) | 15 | 10 | 5 | 0
-Plot produced | 20 | 0 | 0 | 0
-Code will produce 300 frames that can be converted into a final video | 30 | 0 | 0 | 0
+Item | Point Value
+--- | ---
+Runs without errors | 35
+Plot produced | 35
+Code will produce 300 frames that can be converted into a final video | 30
 
 Assignments are not accepted late. Instead, you should submit what you have completed by the due date for partial credit.
 
-Assignments are individual and not team based.  Any assignments found to be  plagiarized will be graded according to the `ACADEMIC HONESTY` section in the syllabus. The Assignment will be graded in broad categories as outlined in the syllabus:
+Assignments are individual and not team based.  Any assignments found to be plagiarized will be graded according to the `ACADEMIC HONESTY` section in the syllabus. Personalize your code by adding comments explaining how your code works. This provides evidence that you wrote it yourself. You are allowed to work with other students, but your comments need to be in your own words.
 
 ## Submission
 
-When finished, upload your Python file and plot to Canvas. Don't upload the video---but make sure to answer the questions at the top of the assignment.
+When finished, upload your assignment.py and signature files to Canvas (no zip files).

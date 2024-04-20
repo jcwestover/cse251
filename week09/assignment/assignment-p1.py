@@ -1,6 +1,7 @@
 '''
 Requirements
 1. Create a recursive program that finds the solution path for each of the provided mazes.
+2. COMMENT every line that you write yourself.
 '''
 
 import math

@@ -30,13 +30,13 @@ The assignment is broken into 2 sections.
 
 [Video Example of Finding a Path](find_path.mp4)
 
-The file `assignment09-p1.py` contains the starting point for this part of the assignment.  There are functions that you are not allowed to change so make sure you note which ones they are.
+The file [assignment-p1.py](assignment-p1.py) contains the starting point for this part of the assignment.  There are functions that you are not allowed to change so make sure you note which ones they are.
 
 The goal of this part of the assignment is to use recursion to find a path from the start to the exit.  In the above video, you can see that if you need to backtrack because a path is a dead end, you indicate the locations that you have been with the grey color. (Review the Maze class on the methods that you can call).
 
 In this part of the assignment, the base case of the recursion is finding the end exit position.  (Review recursion from the links at the end of this page).
 
-Here is a sample run (log file) of part 1.  For some of the mazes, your values will/might be different.
+Here is a sample run of part 1.  For some of the mazes, your values will/might be different.
 
 ```
 ****************************************
@@ -81,7 +81,7 @@ Found path has length          = 1287
 
 [Video Example of Finding the End Position](find_end_position.mp4)
 
-The file `assignment09-p2.py` contains the starting point for this part of the assignment.  There are functions that you are not allowed to change.  (Please note them) .
+The file [assignment-p2.py](assignment-p1.py) contains the starting point for this part of the assignment.  There are functions that you are not allowed to change.  (Please note them) .
 
 In part 2 of the assignment, you will be using threads to find the exit position.  You are not going to return a path from start to end.  
 
@@ -153,37 +153,36 @@ Number of threads created  = 534
 You must install the module `opencv-python`.  Use the same technique that you used to install `numpy` and `matplotlib`. 
 
 ```
-pip install opencv-python
+py -m pip install opencv-python
 ```
 
 ## Rubric
 
 **Part 1**
-Item | Proficient | Emerging | Beginning | Missing
---- | --- | --- | --- | ---
-Runs without errors | 10 | 0 | 0 | 0
-[Style](../../style.md) | 10 | 7 | 3 | 0
-Recursion used to find solution path | 10 | 0 | 0 | 0
-Incorrect paths recolored correctly | 10 | 7 | 3 | 0
-Correctly finds end position | 5 | 0 | 0 | 0
+Item | Point Value
+--- | ---
+Runs without errors | 20
+Recursion used to find solution path | 10
+Incorrect paths recolored correctly | 10
+Correctly finds end position | 10
 
 
 **Part 2**
-Item | Proficient | Emerging | Beginning | Missing
---- | --- | --- | --- | ---
-Runs without errors | 10 | 0 | 0 | 0
-[Style](../../style.md) | 10 | 7 | 3 | 0
-Recursion used to find solution path | 10 | 0 | 0 | 0
-Threads used to explore change in path (with own color) | 10 | 7 | 3 | 0
-Correctly finds end position | 5 | 0 | 0 | 0
-Questions answered | 10 | 10 | 10 | 0
+Item | Point Value
+--- | ---
+Runs without errors | 20
+Recursion used to find solution path | 10
+Threads used to explore change in path (with own color) | 10
+Correctly finds end position | 5
+Questions answered | 5
 
 Assignments are not accepted late. Instead, you should submit what you have completed by the due date for partial credit.
 
-Assignments are individual and not team based.  Any assignments found to be  plagiarized will be graded according to the `ACADEMIC HONESTY` section in the syllabus. The Assignment will be graded in broad categories as outlined in the syllabus:
+Assignments are individual and not team based.  Any assignments found to be plagiarized will be graded according to the `ACADEMIC HONESTY` section in the syllabus. Personalize your code by adding comments explaining how your code works. This provides evidence that you wrote it yourself. You are allowed to work with other students, but your comments need to be in your own words.
 
 ## Submission
 
 When finished
 
-- Upload your Python files to Canvas (part 1 and part 2). Note that in the header section of the part 2 Python file, are 2 questions that need to be answered.
+- Upload your assignment-p1.py and signature files to Canvas. 
+- Upload your assignment-p2.py and signature files to Canvas. Note that in the header section of the part 2 Python file there are questions that need to be answered.

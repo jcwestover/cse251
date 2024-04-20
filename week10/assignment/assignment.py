@@ -5,6 +5,7 @@ Requirements
 3. The callback functions will store the results in global lists based on the task to perform.
 4. Once all 4034 tasks are done, the code should print out each list and a breakdown of 
    the number of each task performed.
+5. COMMENT every line that you write yourself.
    
 Questions:
 1. How many processes did you specify for each pool:
@@ -129,33 +130,33 @@ def load_json_file(filename):
 
 def main():
     begin_time = time.time()
-
+    count = 0
+    
     # TODO Create process pools
 
-    # The below code is test code to show you the logic of what you are supposed to do.
+    # The below code is example code to show you the logic of what you are supposed to do.
     # Remove it and replace with using process pools with apply_async calls.
     # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-    count = 0
-    task_files = glob.glob("tasks/*.task")
-    for filename in task_files:
-        # print()
-        # print(filename)
-        task = load_json_file(filename)
-        print(task)
-        count += 1
-        task_type = task['task']
-        if task_type == TYPE_PRIME:
-            task_prime(task['value'])
-        elif task_type == TYPE_WORD:
-            task_word(task['word'])
-        elif task_type == TYPE_UPPER:
-            task_upper(task['text'])
-        elif task_type == TYPE_SUM:
-            task_sum(task['start'], task['end'])
-        elif task_type == TYPE_NAME:
-            task_name(task['url'])
-        else:
-            print(f'Error: unknown task type {task_type}')
+    # task_files = glob.glob("tasks/*.task")
+    # for filename in task_files:
+    #     # print()
+    #     # print(filename)
+    #     task = load_json_file(filename)
+    #     print(task)
+    #     count += 1
+    #     task_type = task['task']
+    #     if task_type == TYPE_PRIME:
+    #         task_prime(task['value'])
+    #     elif task_type == TYPE_WORD:
+    #         task_word(task['word'])
+    #     elif task_type == TYPE_UPPER:
+    #         task_upper(task['text'])
+    #     elif task_type == TYPE_SUM:
+    #         task_sum(task['start'], task['end'])
+    #     elif task_type == TYPE_NAME:
+    #         task_name(task['url'])
+    #     else:
+    #         print(f'Error: unknown task type {task_type}')
     # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
     # TODO start pools and block until they are done before trying to print

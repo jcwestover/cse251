@@ -55,6 +55,8 @@ Instructions:
   sitting in a circle.
 '''
 
+#COMMENT every line that you write yourself.
+
 import time
 import threading
 

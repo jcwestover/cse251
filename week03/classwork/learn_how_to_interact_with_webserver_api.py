@@ -1,12 +1,3 @@
-"""
-Course: CSE 251
-Lesson Week: 02 - Team Activity
-File: team02-solution.py
-Author: Brother Comeau
-
-Purpose: Playing Card API calls
-"""
-
 from datetime import datetime, timedelta
 import threading
 import requests
@@ -21,13 +12,12 @@ class Request_thread(threading.Thread):
         self.response = {}
 
     def run(self):
-        response = requests.get(self.url)
+        http_response = requests.get(self.url)
         # Check the status code to see if the request succeeded.
-        if response.status_code == 200:
-            self.response = response.json()
+        if http_response.status_code == 200:
+            self.response = http_response.json()
         else:
-            print('RESPONSE = ', response.status_code)
-
+            print('RESPONSE = ', http_response.status_code)
 
 class Deck:
 
@@ -38,20 +28,15 @@ class Deck:
 
 
     def reshuffle(self):
-        req = Request_thread(f'https://deckofcardsapi.com/api/deck/{self.id}/shuffle/')
-        req.start()
-        req.join()
-
+        # TODO - add call to reshuffle
+        pass
 
     def draw_card(self):
-        req = Request_thread(rf'https://deckofcardsapi.com/api/deck/{self.id}/draw/')
-        req.start()
-        req.join()
-        if req.response != {}:
-            self.remaining = req.response['remaining']
-            return req.response['cards'][0]['code']
-        else:
-            return ''
+        # TODO add call to get a card
+        pass
+
+    def cards_remaining(self):
+        return self.remaining
 
 
     def draw_endless(self):
@@ -67,12 +52,11 @@ if __name__ == '__main__':
     #        team_get_deck_id.py program once. You can have
     #        multiple decks if you need them
 
-    deck_id = 'n7v48r4rniei'
+    deck_id = 'enter_deck_id_here'
 
     deck = Deck(deck_id)
-
     for i in range(55):
         card = deck.draw_endless()
         print(i, card, flush=True)
-
     print()
+

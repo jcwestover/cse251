@@ -1,26 +1,10 @@
-import threading
 '''
-Requirements:Create a class that extends the 'threading.Thread'
-1.  class (see https://stackoverflow.com/questions/15526858/how-to-extend-a-class-in-python). This means that the class IS a thread. 
+Requirements:
+1. Create a class that extends the 'threading.Thread' class (see https://stackoverflow.com/questions/15526858/how-to-extend-a-class-in-python). This means that the class IS a thread. 
    Any objects instantiated using this class ARE threads.
-2. Instantiate this thread class that computes the sum of all numbers 
+2. Instantiate this thread class that computes the product of all numbers 
    between one and that number (exclusive)
-
-Psuedocode:
-1. In your class, write a constructor (in python a constructor is __init__) and allow a number
-   to be passed in as a parameter.
-2. The constructor should call the parent class's constructor:
-   threading.Thread.__init__(self)
-3. Create a local sum variable in your constructor.
-4. A thread must have a run function, so create a run function that sums from one to the 
-   passed in number (inclusive).
-5. In the run function, set the sum on self.
-6. In main, instantiate your thread class with the a value of 10.
-7. Start the thread.
-8. Wait for the thread to finish.
-9. Assert that thread object's sum attribute is equal to the appropriate value (see main).
-10. Repeat steps 7 through 10 using a value of 13.
-11. Repeat steps 7 through 10 using a value of 17.
+3. COMMENT every line that you write yourself.
 
 Things to consider:
 a. How do you instantiate a class and pass in arguments (see https://realpython.com/lessons/instantiating-classes/)?
@@ -28,25 +12,35 @@ b. How do you start a thread object (see this week's reading)?
 c. How will you wait until the thread is done (see this week's reading)?
 d. How do you get the value an object's attribute (see https://datagy.io/python-print-objects-attributes/)?
 '''
-######################
-# DO NOT USE GLOBALS #
-######################
 
-# TODO - Create a thread class, see this week's reading to learn how
+import threading
+from cse251functions import *
+
+###############################
+# DO NOT USE YOUR OWN GLOBALS #
+###############################
+
+# TODO - Create a thread class, see this week's reading to learn how (delete this line and
+# replace with your own description of the purpose of your class)
+
 
 def main():
-    # Instantiate your thread class and pass in 10.
-    # Test (assert) if its sum attribute is equal to 45.
-    # Note: do no use 'yourThread' for the name of your thread object
-    assert yourThread.sum == 45, f'The sum should equal 45 but instead was {yourThread.sum}'
-    
-    # Repeat, passing in 13
-    assert yourThread.sum == 78, f'The sum should equal 78 but instead was {yourThread.sum}'
-    
-    # Repeat, passing in 17
-    assert yourThread.sum == 136, f'The sum should equal 136 but instead was {yourThread.sum}'
+    # Instantiate your thread class and pass in 5 (delete this line).
+    # Test (assert) if its product attribute is equal to 45 (delete this line).
+    # Note: do no use 'yourThread' as the name of your thread object (delete this line).
+    assert yourThread.product == 24, f'The product should equal 24 but instead was {
+        yourThread.product}'
+
+    # Repeat, passing in 10 (delete this line).
+    assert yourThread.product == 362880, f'The product should equal 362880 but instead was {
+        yourThread.product}'
+
+    # Repeat, passing in 15 (delete this line).
+    assert yourThread.product == 87178291200, f'The product should equal 87178291200 but instead was {
+        yourThread.product}'
+
 
 if __name__ == '__main__':
     main()
-    assert threading.active_count() == 1
     print("DONE")
+    create_signature_file()

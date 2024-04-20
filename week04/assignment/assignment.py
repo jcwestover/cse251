@@ -27,7 +27,7 @@ import threading
 TOP_API_URL = 'http://127.0.0.1:8790'
 
 # Global Variables
-call_count = 0
+CALL_COUNT = 0
 
 #TODO create a thread class that uses the 'requests' module
 #     to call the server using an URL.
@@ -77,10 +77,8 @@ def main():
     # for each of the categories (might want to create function to do this)
 
     # TODO Call the display function
-    
-    vehicle_urls = films["vehicles"]
 
-    print(f'There were {call_count} calls to the server')
+    print(f'There were {CALL_COUNT} calls to the server')
     total_time = time.perf_counter() - begin_time
     total_time_str = "{:.2f}".format(total_time)
     print(f'Total time = {total_time_str} sec')
@@ -89,7 +87,7 @@ def main():
     # the total_time limit. Note: 90+ seconds means that you are not doing multithreading
     assert total_time < 15, "Unless you have a super slow computer, it should not take more than 15 seconds to get all the data."
     
-    assert call_count == 94, "It should take exactly 94 threads to get all the data"
+    assert CALL_COUNT == 94, "It should take exactly 94 threads to get all the data"
     
 
 if __name__ == "__main__":

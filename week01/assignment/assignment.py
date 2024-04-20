@@ -15,11 +15,11 @@ words what the functions does. Your comments are your "digital signature",
 showing that you both wrote the code and understand how it works.
 
 Grading:
-Missing comments: 0 points (assignment will not be graded) -true for all prove assignments
 Not passing an assert or answering #10 and #12: 0 points (code must pass all asserts--this is only true of this first assignment)
 '''
 
 from unittest import TestCase
+from cse251functions import *
 
 # 1) TODO write a function called 'perform_math' that takes three parameters:
 #      - initial_value: int
@@ -106,6 +106,7 @@ from unittest import TestCase
 # Don't change any of the assert lines. All asserts should pass. You should see "All tests passed!" if all assert pass.
 # If an assert doesn't pass, you will see an AssertionError (see https://www.w3schools.com/python/ref_keyword_assert.asp).
 # The AssertionError will show you why it didn't pass (meaning, it is not an error with the assertion code, but with your code)
+
 def main():
     ''' Know how to:
         - Call a function
@@ -217,7 +218,8 @@ def main():
     assert len(l) == 4
     assert l[3] == "jkl"
     s = "strings are immutable"
-    new_string = pass_by_reference_immutable_example(s, " so adding to it creates a new object in memory")
+    new_string = pass_by_reference_immutable_example(
+        s, " so adding to it creates a new object in memory")
     assert id(s) != id(new_string)
     assert len(new_string) != len(s)
 
@@ -226,3 +228,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+    create_signature_file()
+ 

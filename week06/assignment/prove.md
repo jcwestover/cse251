@@ -1,93 +1,92 @@
 ![](../../banner.png)
 
-# 05 Prove: Manufacturers and Dealerships Part 2
+# 05 Prove: Space Factory and Space Buyers - Part 2
 
 ## Overview
 
-You will be using queue(s) and thread semaphore(s) to synchronize many threads in the production and selling of cars.
+You will be using queue(s) and thread semaphore(s) to synchronize many threads in the production and selling of spaceships.
 
 ## Project Description
 
-This is a continuation of the previous assignment.  Instead of one manufacturer and one dealership, will have multiple of each.  The restriction of only producing `MAX_QUEUE_SIZE` is still in place for all of the dealerships.
+This is a continuation of the previous assignment.  Instead of one factory and one buyer, you will have multiple of each.  The restriction of only producing `MAX_QUEUE_SIZE` is still in place.
 
 ## Assignment
 
 1. Download the [assignment.py](assignment.py) file.
 2. Review the instructions found in the Python file as well as the global constants.
-4. The function `run_production()` will be passed different number of manufacturers and dealerships that are to be created for a production run.
+4. The function `run_production()` will be passed different number of factories and buyers that are to be created for a production run.
 5. You must not use the Python queue object for this assignment.  Use the provided queue class.
 
-Here is a sample run of the completed assignment.  The number of cars each manufacturer produces is random:
+Here is a sample run of the completed assignment.  The number of spaceships each manufacturer produces is random:
 
 ```
-Manufacturers       : 1
-Dealerships         : 1
-Run Time            : 4.99 sec
-Max queue size      : 2
-Manufacturer Stats  : [233]
-Dealer Stats        : [233]
+Begin production run with factory_count=1 and buyer_count=1
+Spaceship Factories : 1
+Spaceship Buyers    : 1
+Run Time            : 0.72 sec
+Factory Stats       : [289]=289
+Buyer Stats         : [289]=289
 
-Manufacturers       : 1
-Dealerships         : 2
-Run Time            : 6.32 sec
-Max queue size      : 2
-Manufacturer Stats  : [295]
-Dealer Stats        : [147, 148]
+Begin production run with factory_count=1 and buyer_count=2
+Spaceship Factories : 1
+Spaceship Buyers    : 2
+Run Time            : 0.73 sec
+Factory Stats       : [286]=286
+Buyer Stats         : [141, 145]=286
 
-Manufacturers       : 2
-Dealerships         : 1
-Run Time            : 6.87 sec
-Max queue size      : 10
-Manufacturer Stats  : [251, 222]
-Dealer Stats        : [473]
+Begin production run with factory_count=2 and buyer_count=1
+Spaceship Factories : 2
+Spaceship Buyers    : 1
+Run Time            : 0.67 sec
+Factory Stats       : [252, 234]=486
+Buyer Stats         : [486]=486
 
-Manufacturers       : 2
-Dealerships         : 2
-Run Time            : 7.27 sec
-Max queue size      : 6
-Manufacturer Stats  : [293, 281]
-Dealer Stats        : [292, 282]
+Begin production run with factory_count=2 and buyer_count=2
+Spaceship Factories : 2
+Spaceship Buyers    : 2
+Run Time            : 0.78 sec
+Factory Stats       : [298, 278]=576
+Buyer Stats         : [287, 289]=576
 
-Manufacturers       : 2
-Dealerships         : 5
-Run Time            : 7.00 sec
-Max queue size      : 5
-Manufacturer Stats  : [283, 211]
-Dealer Stats        : [99, 99, 100, 98, 98]
+Begin production run with factory_count=2 and buyer_count=5
+Spaceship Factories : 2
+Spaceship Buyers    : 5
+Run Time            : 0.66 sec
+Factory Stats       : [259, 211]=470
+Buyer Stats         : [92, 99, 95, 95, 89]=470
 
-Manufacturers       : 5
-Dealerships         : 2
-Run Time            : 14.15 sec
-Max queue size      : 10
-Manufacturer Stats  : [208, 294, 259, 282, 272]
-Dealer Stats        : [649, 666]
+Begin production run with factory_count=5 and buyer_count=2
+Spaceship Factories : 5
+Spaceship Buyers    : 2
+Run Time            : 0.89 sec
+Factory Stats       : [247, 240, 284, 208, 258]=1237
+Buyer Stats         : [613, 624]=1237
 
-Manufacturers       : 10
-Dealerships         : 10
-Run Time            : 26.36 sec
-Max queue size      : 10
-Manufacturer Stats  : [280, 234, 286, 272, 223, 241, 238, 232, 211, 232]
-Dealer Stats        : [246, 244, 245, 242, 248, 246, 244, 244, 240, 250]
+Begin production run with factory_count=10 and buyer_count=10
+Spaceship Factories : 10
+Spaceship Buyers    : 10
+Run Time            : 0.74 sec
+Factory Stats       : [209, 200, 252, 231, 281, 201, 270, 222, 245, 225]=2336
+Buyer Stats         : [228, 228, 233, 237, 222, 235, 235, 243, 250, 225]=2336
 ```
 
 
 ## Rubric
 
-Item | Proficient | Emerging | Beginning | Missing
---- | --- | --- | --- | ---
-Runs without errors | 20 | 0 | 0 | 0
-[Style](../../style.md) | 15 | 10 | 5 | 0
-Semaphore used to control queue size | 10 | 7 | 3 | 0
-Semaphore used to control reading empty queue | 10 | 7 | 3 | 0
-Queue size not used in IF statement | 5 | 5 | 5 | 0
-Cars produced equals cars bought (assert passes) | 20 | 15 | 10 | 0
-Sentinel correctly sent from manufacturer to dealership | 10 | 7 | 3 | 0
-Barrier correctly used to ensure sentinel not placed prematurely on queue | 10 | 7 | 3 | 0
+Item | Point Value
+--- | ---
+Runs without errors | 30
+Semaphore used to control queue size | 15
+Semaphore used to control reading empty queue | 15
+Queue size not used in IF statement | 5
+Spaceships produced equals spaceships bought (assert passes) | 20
+Sentinel correctly sent from factory to buyer | 10
+Barrier correctly used to ensure sentinel not placed prematurely on queue | 10
 
 Assignments are not accepted late. Instead, you should submit what you have completed by the due date for partial credit.
 
-Assignments are individual and not team based.  Any assignments found to be  plagiarized will be graded according to the `ACADEMIC HONESTY` section in the syllabus. The Assignment will be graded in broad categories as outlined in the syllabus:
+Assignments are individual and not team based.  Any assignments found to be plagiarized will be graded according to the `ACADEMIC HONESTY` section in the syllabus. Personalize your code by adding comments explaining how your code works. This provides evidence that you wrote it yourself. You are allowed to work with other students, but your comments need to be in your own words.
 
 ## Submission
 
-When finished, upload your Python file to Canvas.
+When finished, upload your assignment.py and signature files to Canvas (no zip files).

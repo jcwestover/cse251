@@ -53,10 +53,10 @@ The `*-delay` values are used to delay the different steps/processes in the fact
 
 ## Assignment
 
-1. Download the `assignment07.py` and `settings.txt` files to your computer in one directory.
-2. `assignment07.py` includes `TODO` comments that you need to implement.
+1. Download the [assignment.py](assignment.py) and [settings.txt](assignment.py) files to your computer in one directory.
+2. `assignment.py` includes `TODO` comments that you need to implement.
 
-Your program will create a file called `boxes.txt` that will contain the created gifts.  Here are a few lines from this file.  (You can get the current time using `datetime.now().time()`)
+Your program will create a file called `boxes.txt` that will contain the created gifts.  Here are a few lines from this file.(Hint, use this string: `"Created - " + str(datetime.now().time()) + ": " + str(gift) + "\n"`)
 
 ```
 Created - 11:51:13.400554: Large marble: Winner, marbles: Royal Red, Orange Soda, Antique Brass, Arylide Yellow, Bistre Brown, Neon Silver, Pale Taupe
@@ -80,21 +80,19 @@ Created - 11:51:15.030378: Large marble: Sure Shot, marbles: Tuscan Brown, Neon 
         
 ## Rubric
 
-Item | Proficient | Emerging | Beginning | Missing
---- | --- | --- | --- | ---
-Runs without errors | 20 | 0 | 0 | 0
-[Style](../../style.md) | 15 | 10 | 5 | 0
-Pipes used correctly | 20 | 15 | 10 | 0
-Settings read in and used correctly | 15 | 10 | 5 | 0
-Correctly filled in output file produced | 20 | 15 | 10 | 0
-Questions answered | 10 | 10 | 10 | 0
+Item | Point Value
+--- | ---
+Runs without errors | 30
+Pipes used correctly | 20
+Settings read in and used correctly | 15
+Correct output file produced | 20
+Questions answered | 10
 
 Assignments are not accepted late. Instead, you should submit what you have completed by the due date for partial credit.
 
-Assignments are individual and not team based.  Any assignments found to be  plagiarized will be graded according to the `ACADEMIC HONESTY` section in the syllabus. The Assignment will be graded in broad categories as outlined in the syllabus.
+Assignments are individual and not team based.  Any assignments found to be plagiarized will be graded according to the `ACADEMIC HONESTY` section in the syllabus. Personalize your code by adding comments explaining how your code works. This provides evidence that you wrote it yourself. You are allowed to work with other students, but your comments need to be in your own words.
 
 ## Submission
-To submit your assignment:
 
-Upload your program (the .py file) and the `boxes.txt` file to Canvas.
+When finished, upload your assignment.py and signature files to Canvas (no zip files).
 

@@ -10,15 +10,32 @@ Programs can run with and without threads.  In this assignment you will be takin
 
 See the list of requirements and psuedocode in [assignment](assignment.py).
 
+Psuedocode: 
+1. Create variable for the start number (10_000_000_000)
+2. Create variable for range of numbers to examine (110_003)
+3. Create variable for number of threads (start with 1 to get your program running,
+   then increase to 5, then 10).
+4. Determine an algorithm to partition the 110,003 numbers based on 
+    the number of threads. Each thread should have approx. the same amount
+    of numbers to examine. For example, if the number of threads is
+    5, then the first 4 threads will examine 22,000 numbers, and the
+    last thread will examine 22,003 numbers. Determine the start and
+    end values of each partition.
+5. Use these start and end values as arguments to a function.
+6. Use a thread to call this function.
+7. Create a function that loops from a start and end value, and checks
+   if the value is prime using the isPrime function. Use the globals
+   to keep track of the total numbers examined and the number of primes
+   found. 
+
 ## Rubric
 
 Item | Proficient | Emerging | Beginning | Missing
 --- | --- | --- | --- | ---
 Runs without errors | 20 | 0 | 0 | 0
-[Style](../../style.md)* | 20 | 15 | 10 | 0
-Uses a variable amount of threads | 20 | 15 | 10 | 0
-Fairly divides up the numbers among the threads | 20 | 15 | 10 | 0
-Asserts pass | 10 | 7 | 3 | 0
+Uses a variable amount of threads | 25 | 15 | 10 | 0
+Fairly divides up the numbers among the threads | 25 | 15 | 10 | 0
+Asserts pass | 20 | 7 | 3 | 0
 Questions answered | 10 | 7 | 3 | 0
 
 Assignments are not accepted late. Instead, you should submit what you have completed by the due date for partial credit.
@@ -27,5 +44,5 @@ Assignments are individual and not team based.  Any assignments found to be plag
 
 ## Submission
 
-When finished, upload your Python file to Canvas (please no ZIP files).
+When finished, upload your assignment.py and signature files to Canvas (no zip files).
 

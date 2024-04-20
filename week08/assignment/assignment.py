@@ -14,6 +14,7 @@ Requirements
    gift string.
 8. The program should not hard-code the number of marbles, the various delays,
    nor the bag count. These should be obtained from the settings.txt file.
+9. COMMENT every line that you write yourself.
    
 Questions:
 1. Why can you not use the same pipe object for all the processes (i.e., why 
