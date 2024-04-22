@@ -30,6 +30,7 @@ t.join()
 def computeProduct(n: int):
 ```
 5. A comment should demonstrate an understanding of the line it comments:
+
 Bad example:
 ```
 # Start of a loop
