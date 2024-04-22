@@ -83,8 +83,8 @@ Created - 11:51:15.030378: Large marble: Sure Shot, marbles: Tuscan Brown, Neon 
 Item | Point Value
 --- | ---
 Runs without errors | 30
-Pipes used correctly | 20
-Settings read in and used correctly | 15
+Pipes used correctly | 30
+Settings read in and used correctly | 10
 Correct output file produced | 20
 Questions answered | 10
 

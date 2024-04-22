@@ -1,6 +1,6 @@
 ![](../../banner.png)
 
-# 05 Prove: Space Factory and Space Buyers - Part 2
+# 06 Prove: Space Factory and Space Buyers - Part 2
 
 ## Overview
 
@@ -80,7 +80,6 @@ Semaphore used to control queue size | 15
 Semaphore used to control reading empty queue | 15
 Queue size not used in IF statement | 5
 Spaceships produced equals spaceships bought (assert passes) | 20
-Sentinel correctly sent from factory to buyer | 10
 Barrier correctly used to ensure sentinel not placed prematurely on queue | 10
 
 Assignments are not accepted late. Instead, you should submit what you have completed by the due date for partial credit.

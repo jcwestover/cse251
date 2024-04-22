@@ -30,13 +30,13 @@ Psuedocode:
 
 ## Rubric
 
-Item | Proficient | Emerging | Beginning | Missing
---- | --- | --- | --- | ---
-Runs without errors | 20 | 0 | 0 | 0
-Uses a variable amount of threads | 25 | 15 | 10 | 0
-Fairly divides up the numbers among the threads | 25 | 15 | 10 | 0
-Asserts pass | 20 | 7 | 3 | 0
-Questions answered | 10 | 7 | 3 | 0
+Item | Point Value
+--- | ---
+Runs without errors | 20
+Uses a variable amount of threads | 25
+Fairly divides up the numbers among the threads | 25
+Asserts pass | 20
+Questions answered | 10
 
 Assignments are not accepted late. Instead, you should submit what you have completed by the due date for partial credit.
 
