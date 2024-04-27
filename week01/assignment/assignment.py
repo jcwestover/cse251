@@ -21,87 +21,227 @@ Not passing an assert or answering #10 and #12: 0 points (code must pass all ass
 from unittest import TestCase
 from cse251functions import *
 
-# 1) TODO write a function called 'perform_math' that takes three parameters:
-#      - initial_value: int
-#      - value: int
-#      - operation: str
-#      - return value: float
-#      The function should perform the mathematical operation, represented
-#      by the string operation parameter, on the initial_value and value.
-#      Delete these instructions and replace with your own description of that the function does.
 
-# 2) TODO write a function called 'find_word_index' that takes two parameters:
-#      - word_to_find: str
-#      - words: list
-#      - return value: int
-#      The function should return the index value of the word_to_find in the words list.
-#      Delete these instructions and replace with your own description of that the function does.
+def perform_math(initial_value: int, value: int, operation: str) -> float:
+    '''
+    Description
+        performs mathematical operations based on user input
 
-# 3) TODO write a function called 'get_value_from_dict_using_key' that takes two parameters:
-#      - key: str
-#      - word_dict: dict
-#      - return value: str
-#      The function should return the value (which will be a string) mapped to the key.
-#      Delete these instructions and replace with your own description of that the function does.
+    Parameters
+        initial value (int): first int in mathematical equation
+        value (int): second int in mathematical equation
+        operation (str): operator you would like to use in the equation
 
-# 4) TODO write a function called 'get_list_of_urls_from_dict' that takes two parameters:
-#      - key: str
-#      - url_dict: dict
-#      - return value: list
-#      The function should return the value (which will be a list) mapped to the key.
-#      Delete these instructions and replace with your own description of that the function does.
+    Return
+        answer (float): result of the mathematical operation
+    '''
+    # python's "switch" statement. Used to determine the calculation needed based on user input
+    match operation:
+        case '+':
+            answer = initial_value + value
+        
+        case '-':
+            answer = initial_value - value
 
-# 5) TODO write a function called 'find_url' that takes two parameters:
-#      - urls: list
-#      - name: str
-#      - return value: str
-#      The function should return the url that contains the name within a list of urls,
-#      else return a blank string.
-#      Delete these instructions and replace with your own description of that the function does.
+        case '*':
+            answer = initial_value * value
 
-# 6) TODO write a function called 'find_str_in_file' that takes two parameters:
-#      - filename: str
-#      - str_to_find: str
-#      - return value: bool
-#      The function should return true if str_to_find is within the file, else false
-#      Delete these instructions and replace with your own description of that the function does.
+        case '/':
+            answer = initial_value / value
 
-# 7) TODO write a class called 'MyParentClass'. The constructor should take three parameters:
-#      - value: int
-#      - values: list
-#      - name: str
-#      Add a method called 'get_value_using_index' that returns the value
-#      in the values list at an index that is passed.
-#      Delete these instructions and replace with your own description of that the function does.
+        case '//':
+            answer = initial_value // value
 
-# 8) TODO write a class called 'MyChildClass'. The class should extend the MyParentClass.
-#      The constructor should take four parameters:
-#      - value: int
-#      - values: list
-#      - name: str
-#      - age: int
-#      The constructor should call super and pass in the appropriate parameters
-#      Delete these instructions and replace with your own description of that the function does.
+        case '**':
+            answer = initial_value ** value
+    
+    return answer
 
-# 9) TODO write a function called 'pass_by_reference_mutable_example' that takes two parameters:
-#      - lists_are_passed_by_reference_and_mutable: list
-#      - str_to_add: str
-#      - return value: str
-#      The function should append the str_to_add to the list and return index zero. Notice that in the asserts,
-#      that the memory id of the list stays the same after adding the string. Also, the function
-#      does not need to return the list in order for it to see the newly added item. Since the function
-#      needs to return a string, you can make changes to a list without needing to return it from a function.
-#      Delete these instructions and replace with your own description of that the function does.
-#      10) TODO: Provide a quick explanation of what pass-by-reference means. Also, what does mutable mean?
 
-# 11) TODO write a function called 'pass_by_reference_immutable_example' that takes two parameters:
-#      - strings_are_pass_by_reference_and_immutable: string
-#      - str_to_add: str
-#      - return value: str
-#      The function should append the str_to_add to the strings_are_pass_by_reference_and_immutable string.
-#      Notice that in the asserts, that the memory id of the first string and the return string are different.
-#      Delete these instructions and replace with your own description of that the function does.
-#      12) TODO: What does immutable mean?
+
+def find_word_index(word_to_find: str, words: list) -> int:
+    '''
+    Description
+        returns the index value of a specific value in list based on user input
+
+    Parameters
+        word_to_find (str): value you would like to find the index for in the list
+        words (list): list that contains the value you would like to find the index to
+
+    Return
+        value (int): index value of word_to_find in the words list 
+    '''
+    #using index method in order to find the value (int) of word_to_find in the words list
+    value = words.index(word_to_find)
+    
+    return value
+
+
+def get_value_from_dict_using_key(key: str, word_dict: dict) -> str:
+    '''
+    Description
+        returns the value mapped to the given key from the given dictionary
+
+    Parameters
+        key (str): key to find its mapped value in the dictionary
+        word_dict (dict): dictionary which contains the key - value pairs you would like to access
+
+    Returns
+        value (str): the value of the entered key
+    '''
+    #using .get method in order to find the value of the entered key in the given dictionary
+    value = word_dict.get(key)
+
+    return value
+
+
+def get_list_of_urls_from_dict(key: str, url_dict: dict) -> list:
+    '''
+    Description
+        Gets the value mapped to 'key' in url_dict
+
+    Parameters
+        key (str): key whose value will be returned
+        url_dict (dict): dictionary which contains the key-value pairs you would like to access
+
+    Return
+        value (list): list mapped to the given key
+    '''
+    value = url_dict.get(key)
+
+    return value
+
+
+def find_url(urls: list, name: str) -> str:
+    '''
+    Description
+        Returns the url that contains the name within a list of urls
+
+    Parameters
+        urls (list): list of urls
+        name (str): name you would like to search for within the list of urls
+
+    Return
+        value (str): The url that contains the given name (if found)
+        "": if no url is found that containes the given name
+    '''
+    #loops through all urls
+    for url in urls:
+
+        #if name is found in url it reutrns that url. else returns empty str
+        if name in url:
+            return url
+    return ""
+
+
+def find_str_in_file(filename: str, str_to_find: str) -> bool:
+    '''
+    Description
+        returns true if str_to_find in within the file, else false
+
+    Parameters
+        filename (str): filename that will be used to search for str_to_find
+        str_to_find (str): string that will be searched for in filename
+
+    Return
+        (bool): True if str_to_find is within the file, else False
+    '''
+    #opens file with same name as passed name
+    with open(filename, 'r') as file:
+
+        #iterates through lines in file
+        for line in file:
+
+            #if str_to_find is found in the current line it will return True, else False
+            if str_to_find in line:
+                return True
+    return False
+
+
+class MyParentClass:
+    '''
+    Description
+        creates a class with three parameters
+
+    Parameters
+        value (int)
+        values (list)
+        name (str)
+    '''
+
+    #constructor for MyParentClass
+    def __init__(self, value: int, values: list, name: str) -> None:
+        self.value = value
+        self.values = values
+        self.name = name
+
+    def get_value_using_index(self, index: int):
+        '''
+        Description
+            returns the value in the values list at an index that is passed in
+
+        Parameteres
+            index (int): index that will be used to find the desired value in values list
+
+        Return
+            value at passed in input in values list
+        '''
+        return self.values[index]
+
+
+class MyChildClass(MyParentClass):
+    '''
+    Description
+        creates a class that extended MyParentClass
+
+    Parameters
+        value (int)
+        values (list)
+        name (str)
+        age (int)
+    '''
+
+    #constructor for MyChildClass
+    def __init__(self, value: int, values: list, name: str, age: int) -> None:
+        super().__init__(value, values, name)
+        self.age = age
+
+
+        '''Pass by reference means that changes made to an object (in this case a list) inside a function will also be made to the original data in global scope.'''
+
+
+def pass_by_reference_mutable_example(lists_are_passed_by_reference_and_mutable: list, str_to_add: str) -> str:
+    '''
+    Description
+        appends str_to_add to list and returns index 0 (zero)
+
+    Parameters
+        lists_are_passed_by_reference_and_mutable (list): List that str_to_add will be appended to.
+        str_to_add (str): string that will be added to lists_are_passed_by_reference_and_mutable 
+
+    Return
+        returns index 0 (zero) if lists_are_passed_by_reference_and_mutable
+    '''
+    lists_are_passed_by_reference_and_mutable.append(str_to_add)
+    return lists_are_passed_by_reference_and_mutable[0]
+
+
+'''immutable means that a data type cannot be changed.'''
+
+
+def pass_by_reference_immutable_example(strings_are_pass_by_reference_and_immutable: str, str_to_add: str) -> str:
+    '''
+    Description
+        appends str_to_add to strings_are_pass_by_reference_and_immutable
+
+    Parameters
+        strings_are_pass_by_reference_and_immutable (str): string that str_to_add will be appended to
+        str_to_add (str): string that will be appended to strings_are_pass_by_reference_and_immutable
+    
+    Return
+        (str) appened string
+    '''
+    return strings_are_pass_by_reference_and_immutable + str_to_add
 
 # Don't change any of the assert lines. All asserts should pass. You should see "All tests passed!" if all assert pass.
 # If an assert doesn't pass, you will see an AssertionError (see https://www.w3schools.com/python/ref_keyword_assert.asp).
@@ -175,8 +315,8 @@ def main():
         - Understand that an extended/child class inherits everything from parent class
         - Readings: https://www.geeksforgeeks.org/python-classes-and-objects/, https://www.geeksforgeeks.org/extend-class-method-in-python/, https://realpython.com/python-super/
     '''
-    # 13) TODO instantiate an object using MyParentClass with the following three parameters: (1, [5, 6, 7], "3")
-    obj = ...
+    
+    obj = MyParentClass(1, [5, 6, 7], '3')
     assert obj.value == 1
     assert obj.values == [5, 6, 7]
     assert obj.name == "3"
@@ -184,12 +324,8 @@ def main():
     assert obj.get_value_using_index(1) == 6
     assert obj.get_value_using_index(2) == 7
 
-    # 14) TODO instantiate an object using MyChildClass with the following four parameters: (1, [5, 6, 7], "3", 10).
-    # 15) TODO: do NOT duplicate the code in the parent class when writing the child class. For example, the parent
-    # class constructor already creates the value, values, and name parameters. Do not write these in the child
-    # class. Instead, the child constructor should call the parent constructor. Same for the 'get_value_using_index'
-    # function, do not rewrite this in the child class.
-    childObj = ...
+
+    childObj = MyChildClass(1, [5, 6, 7], '3', 10)
     assert childObj.value == 1
     assert childObj.values == [5, 6, 7]
     assert childObj.name == "3"
