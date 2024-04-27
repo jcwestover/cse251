@@ -93,7 +93,7 @@ def create_signature_file():
     resource_path = os.path.realpath(os.path.join(
         os.getcwd(), os.path.dirname(__file__)))
     # append the font name
-    font_path = resource_path + r"\COURBD.TTF"
+    font_path = resource_path + r"/COURBD.TTF"
 
     img = Image.new('CMYK', (width, height))
     draw1 = ImageDraw.Draw(img)
