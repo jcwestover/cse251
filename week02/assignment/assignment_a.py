@@ -37,6 +37,7 @@ def my_function(number):
    # Access global var
    global PRODUCT
 
+   # Reassign PRODUCT as 1
    PRODUCT = 1
 
    # Iterates through range from 1 up till the number that was input
