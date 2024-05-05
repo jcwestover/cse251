@@ -48,24 +48,41 @@ def my_function(number):
 
 
 def main():
-    
+
+   # creating thread5 that takes the argument of 5 for number parameter
    thread5 = threading.Thread(target=my_function, args=(5,))
+
+   # creating thread10 that takes the argument of 10 for number parameter
    thread10 = threading.Thread(target=my_function, args=(10,))
+
+   # creating thread15 that takes the argument of 15 for number parameter
    thread15 = threading.Thread(target=my_function, args=(15,))
 
+   # start thread5
    thread5.start()
+
+   # wait for thread 5 to finish
    thread5.join()
 
+   # assert statment for PRODUCT of thread5
    assert PRODUCT == 24, f'The product should equal 24 but instead was {PRODUCT}'
 
+   # start thread10
    thread10.start()
+
+   # wait for thread10 to finish
    thread10.join()
 
+   # assert statement for PRODUCT of thread10
    assert PRODUCT == 362880, f'The product should equal 362880 but instead was {PRODUCT}'
 
+   # start thread15
    thread15.start()
+
+   # wait for thread15 to finish
    thread15.join()
 
+   # assert statement for the PRODUCT of thread15
    assert PRODUCT == 87178291200, f'The product should equal 87178291200 but instead was {PRODUCT}'
 
 if __name__ == '__main__':
