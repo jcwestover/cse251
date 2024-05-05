@@ -21,23 +21,51 @@ import threading
 from cse251functions import *
 
 # global variable to keeping track of the final product
-PRODUCT = 0
+PRODUCT = 1
+
+def my_function(number):
+   '''
+   Description
+      takes inputed number and calculates the product of all numbers between 1 and the given number.
+
+   Parameters
+      number: number that will be used in the calculation
+
+   Return
+      PRODUCT
+   '''
+   # Access global var
+   global PRODUCT
+
+   PRODUCT = 1
+
+   # Iterates through range from 1 up till the number that was input
+   for i in range(1, number):
+
+      # multiplies PRODUCT var by the number i and then reassigns the PRDOUCT var to that product
+      PRODUCT *= i 
 
 
 def main():
+    
+   thread5 = threading.Thread(target=my_function, args=(5,))
+   thread10 = threading.Thread(target=my_function, args=(10,))
+   thread15 = threading.Thread(target=my_function, args=(15,))
 
-    # Test your thread/function first with 5 (so 1 x 2 x 3 x 4 = 24) (replace this line with your own comment)
-    #assert PRODUCT == 24, f'The product should equal 45 but instead was {
-    #    PRODUCT}'
+   thread5.start()
+   thread5.join()
 
-    # Then with 10 (replace this line with your own comment)
-    #assert PRODUCT == 362880, f'The product should equal 78 but instead was {
-    #    PRODUCT}'
+   assert PRODUCT == 24, f'The product should equal 24 but instead was {PRODUCT}'
 
-    # Then with 15 (replace this line with your own comment)
-    #assert PRODUCT == 87178291200, f'The product should equal 136 but instead was {
-    #    PRODUCT}'
-    pass # delete this line
+   thread10.start()
+   thread10.join()
+
+   assert PRODUCT == 362880, f'The product should equal 362880 but instead was {PRODUCT}'
+
+   thread15.start()
+   thread15.join()
+
+   assert PRODUCT == 87178291200, f'The product should equal 87178291200 but instead was {PRODUCT}'
 
 if __name__ == '__main__':
     main()
