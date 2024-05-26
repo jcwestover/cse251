@@ -33,7 +33,7 @@ import random
 import string
 # DO NOT import queue
 
-from plots import Plots
+from plots import *
 from cse251functions import *
 
 # Global Constants
