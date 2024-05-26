@@ -14,14 +14,14 @@ Requirements
 Questions:
 1. Do you need to use locks around accessing the queue object when using multiple threads? 
    Why or why not?
-   >
+   >Yes because if you do not it may cause race conditions and data corruption.
    >
 2. How would you define a semaphore in your own words?
-   >
+   > It controls access to a resource (in the case of this assignment, the queue). I does this by acquiring access and then releasing access so only the desired number of threads have access to the resource at once.
    >
 3. Read https://stackoverflow.com/questions/2407589/what-does-the-term-blocking-mean-in-programming.
    What does it mean that the "join" function is a blocking function? Why do we want to block?
-   >
+   > The join function is a blocking function because it will cause the thread to wait (or block it) until the thread has finished running. We want to block in order to ensure the thread has finished its tasks before the program moves on.
    >
    >
 '''
