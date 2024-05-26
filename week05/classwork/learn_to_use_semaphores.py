@@ -23,7 +23,7 @@ class Food:
         # Takes some time to prepare food
         time.sleep(random.random() / (SLEEP_REDUCE_FACTOR))
 
-        #print(f'putting {self.choice} on the table')
+        print(f'putting {self.choice} on the table')
 
     def __str__(self) -> str:
         return self.choice
@@ -58,20 +58,31 @@ class Feeder(threading.Thread):
         # Important - note that a class that extends another class
         # has to call the parent class's constructor (__init__):
         threading.Thread.__init__(self)
-        
-        # TODO create necessary attributes on self so that they can be
-        #      accessed in the run function
+        self.feeder_index = feeder_index
+        self.sem_mouth_full = sem_mouth_full
+        self.sem_can_I_eat = sem_can_I_eat
+        self.table_queue = table_queue
+        self.table_lock = table_lock
+        self.food_made = 0
+
 
     def run(self):
         # Loop over amount of food to make
         for _ in range(FOOD_TO_MAKE):
             
             # TODO - use a semaphore to prevent putting too much food in queue (table)
-            
+            self.sem_mouth_full.acquire()
+
             # TODO - lock, put food on queue (table), increment food made counter, unlock
-            
+            self.table_lock.acquire()
+            food = Food()
+            self.table_queue.put(food)
+            self.food_made += 1
+            self.table_lock.release()
+
             # TODO - signal to eater that food has been placed on table
-            
+            self.sem_can_I_eat.release()
+
             pass # remove this
         
         # TODO - after adding all food, signal to eater that there is no more food
@@ -84,26 +95,38 @@ class Eater(threading.Thread):
                  eater_index,
                  sem_mouth_full: threading.Semaphore,
                  sem_can_I_eat: threading.Semaphore,
-                 table_queue,
-                 table_lock):
+                 table_queue: Queue251,
+                 table_lock: threading.Lock):
 
         # Important - note that a class that extends another class
         # has to call the parent class's constructor (__init__):
         threading.Thread.__init__(self)
         
-        # TODO create necessary attributes on self so that they can be
-        #      accessed in the run function
+        self.eater_index = eater_index
+        self.sem_mouth_full = sem_mouth_full
+        self.sem_can_I_eat = sem_can_I_eat
+        self.table_queue = table_queue
+        self.table_lock = table_lock
+        self.food_eaten = 0
 
     def run(self):
         while True:
             
             # TODO - using a semaphore, prevent removing item from an empty queue
-            
+            self.sem_can_I_eat.acquire()
             # TODO - lock, get food from queue, and unlock
-            
-            # TODO - if item from queue is None, then break; else increment food ate counter
-            
+            self.table_lock.acquire()
+            food = self.table_queue.get()
+            self.table_lock.release()
+
+            if food == None:
+                print('All done eating')
+                break
+            self.food_eaten += 1
+
             # TODO - signal to feeder to put more food on table
+            self.sem_mouth_full.release()
+
 
             # Need some time to digest (leave this)
             time.sleep(random.random() / (SLEEP_REDUCE_FACTOR))
